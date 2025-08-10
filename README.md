@@ -173,6 +173,13 @@ API Reference
 * `rtlsdr_dev` - Opaque device handle
 * `rtlsdr_read_async_cb_t :: proc "c" (buf: ^u8, len: u32, ctx: rawptr)` - Async callback type
 
+**Utility Functions:**
+* `utils.mhz_to_hz(freq: f64) -> u32` - Convert MHz to Hz
+* `utils.hz_to_mhz(freq: u32) -> f64` - Convert Hz to MHz  
+* `utils.mhz_to_khz(freq: f64) -> f64` - Convert MHz to kHz
+* `utils.khz_to_mhz(freq: u32) -> f64` - Convert kHz to MHz
+* `utils.u8_to_f32(input: ^u8, len: u32) -> []f32` - Convert interleaved u8 IQ data to normalized f32 array [-1, 1]
+
 Typical Workflow
 ----------------
 1. Enumerate devices & pick index

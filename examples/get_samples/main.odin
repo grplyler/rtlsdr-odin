@@ -3,6 +3,7 @@ import "core:fmt"
 import "core:time"
 
 import rtlsdr "../../rtlsdr"
+import utils "../../rtlsdr/utils"
 
 main :: proc () {
     using rtlsdr
@@ -42,7 +43,12 @@ main :: proc () {
     if read_result == 0 {
         fmt.println("Successfully read", bytes_read, "bytes from RTL-SDR")
         // Process the data in buffer here
+        first_few := buffer[:min(10, bytes_read)]
+
+        first_few_f32 := utils.u8_to_f32(raw_data(first_few), u32(len(first_few)))
+
         fmt.println("First few samples:", buffer[:min(10, len(buffer))])
+        fmt.println("First few samples (converted to f32):", first_few_f32[:min(10, len(first_few_f32))])
     } else {
         fmt.println("Failed to read from device, error:", read_result)
     }
