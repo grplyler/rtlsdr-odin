@@ -202,9 +202,8 @@ Using in your Project
 ----------------------
 Copy the `rtlsdr` directory into your project. Reference it in your Odin code:
 ```odin
-import "path/to/"
+import "path/to/rtlsdr"
 ```
-
 Thats it.
 
 Data Format
