@@ -106,7 +106,8 @@ Opened device 0 : Generic RTL2832U OEM
 Read result code: 0
 Bytes read: 16384
 Successfully read 16384 bytes from RTL-SDR
-First few samples: [124, 128, 124, 127, 125, 126, 125, 125, 125, 126]
+First few samples: [124, 127, 124, 127, 124, 126, 124, 126, 124, 126]
+First few samples (converted to f32): [-0.027450979, -0.0039215684, -0.027450979, -0.0039215684, -0.027450979, -0.011764705, -0.027450979, -0.011764705, -0.027450979, -0.011764705]   
 ```
 
 Async Streaming
