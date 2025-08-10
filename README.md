@@ -98,6 +98,17 @@ main :: proc () {
 }
 ```
 
+**Example Output:**
+```
+Found Rafael Micro R828D tuner
+RTL-SDR Blog V4 Detected
+Opened device 0 : Generic RTL2832U OEM
+Read result code: 0
+Bytes read: 16384
+Successfully read 16384 bytes from RTL-SDR
+First few samples: [124, 128, 124, 127, 125, 126, 125, 125, 125, 126]
+```
+
 Async Streaming
 ---------------
 Asynchronous mode spawns internal worker threads in the driver and invokes your callback continuously until cancelled:
